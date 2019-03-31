@@ -1,3 +1,3 @@
-# Compiler design labs
+# Compiler
 
-Please go to "reflection.md" file for lab0.
+Contains lab0, lab1 and lab2 solutions.
