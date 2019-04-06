@@ -1,0 +1,37 @@
+##############################################################################
+#Test grammars and lexers
+##
+##                
+##grammar = {'S':[rule('S S STM',None,lambda p: [p[2]]+p[1]),
+##		rule('S ',None,lambda p: [])],
+##	   'CALL':[rule('CALL ID OPTARG','call',lambda p: (p[0],p[1],p[2]))],
+##           'ID':[rule('ID word',None,lambda p: p[1])],
+##	   'OPTARG':[rule('OPTARG pl ARGS pr',None,lambda p: p[2]),
+##                    rule('OPTARG pl pr',None,lambda p: [])],
+##	   'ARGS':[rule('ARGS EXP comma ARGS',None,lambda p: [p[1]]+p[3]),
+##                   rule('ARGS EXP',None,lambda p: [p[1]])],
+##	   'EXP':[rule('EXP int','int',lambda p: (p[0],p[1])),
+##                  rule('EXP EXP add EXP','add',lambda p: (p[0],p[1],p[3])),
+##		  rule('EXP EXP minus EXP','minus',lambda p: (p[0],p[1],p[3])),
+##		  rule('EXP CALL',None,lambda p: p[1])],
+##	   'STM':[rule('STM EXP scolon','statement',lambda p: (p[0],p[1]))]}
+##chart = {}       
+##
+##
+##lexer = [temp('word','[A-Za-z]+'),
+##         temp('pl','\('),
+##         temp('pr','\)'),
+##         temp('int','[1-9][0-9]*',lambda a: int(a)),
+##         temp('comma',','),
+##         temp('space',' +',lambda a: None),
+##         temp('newline','\n',lambda a: None),
+##         temp('add','\+'),
+##         temp('scolon',';'),
+##         temp('minus','\-')]
+##
+##string = '''proc (1+2-3,4);
+##            proc (1+2-3,4);'''
+##
+##print parse(grammar, {}, lex(string, lexer), grammar['S'][0])
+
+##############################################################################
