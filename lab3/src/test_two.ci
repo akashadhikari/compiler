@@ -1,0 +1,41 @@
+program example1
+  declare d,i,g,f enddeclare
+
+  procedure two (in g)
+    function three (in g, inout x, inout m)
+      declare k, j enddeclare
+      k:=g;
+      j:=g;
+      repeat
+        if k>i then
+          exit
+        endif;
+        j:=j*k;
+        k:=k+g
+      endrepeat;
+      m:=j;
+      return m+1;
+      x:=7
+    endfunction
+    i:=three (in i+2, inout d, inout f)
+  endprocedure
+
+  function one (in g)
+    call two(in g)
+  endfunction
+
+  i:=5;
+  g:=1;
+  call one (in g);
+
+  switch i
+    case 2: i:=2
+    case 3: i:=3
+  endswitch;
+
+  forcase
+    when i=2: i:=2
+    when i=3: i:=3
+  endforcase
+
+endprogram

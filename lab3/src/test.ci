@@ -1,0 +1,23 @@
+/* Example 3 */
+// Example 3
+program example3
+   declare a,b,c,d,e,x,y,px,py,temp enddeclare
+   repeat
+      if not [a<c and b<d] then
+          exit
+      endif;
+      if a=e then
+          c:=c/e
+      else
+          repeat
+              if not [a<=d] then
+                  exit
+              endif;
+              g:=a+b
+          endrepeat
+      endif
+   endrepeat;
+   temp:=px;
+   x:=1;
+   y:=2
+endprogram
